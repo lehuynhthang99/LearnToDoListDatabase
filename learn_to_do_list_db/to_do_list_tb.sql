@@ -19,11 +19,12 @@ CREATE TABLE IF NOT EXISTS `to_do_list_tb` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'To do list ID',
   `user_id` int unsigned NOT NULL DEFAULT '0' COMMENT 'User Id creating this list',
   `name` varchar(100) DEFAULT NULL COMMENT 'Name of the to do list',
+  `items` json DEFAULT NULL COMMENT 'List of items need to do',
   `created_at` datetime DEFAULT (utc_timestamp()) COMMENT 'Created time of the to do list',
   PRIMARY KEY (`id`),
   KEY `FK_users_id` (`user_id`),
   CONSTRAINT `FK_users_id` FOREIGN KEY (`user_id`) REFERENCES `users_tb` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table stores to do list by a user';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table stores to do list by a user';
 
 -- Data exporting was unselected.
 

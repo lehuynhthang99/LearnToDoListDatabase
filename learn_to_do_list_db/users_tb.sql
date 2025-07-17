@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `users_tb` (
   `name` varchar(100) DEFAULT '0' COMMENT 'User name',
   `created_at` datetime NOT NULL DEFAULT (utc_timestamp()) COMMENT 'Created time',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='A table to store user data';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='A table to store user data';
 
 -- Data exporting was unselected.
 
